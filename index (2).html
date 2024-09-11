@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+
+    <script>
+        function jokes (category){fetch('https://api.chucknorris.io/jokes/random?category='+category)
+    .then(response=>response.json())
+    .then(json => document.getElementById("chucks").innerHTML=json.value)
+    .catch(error => console.log('unable to reach URL'+error));
+
+   }
+    
+   
+   </script>
+<style>
+
+button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ba00ba;
+            color: rgb(52, 30, 74);
+            font-size: 14px;
+            text-shadow: #131819;
+            }
+</style>
+</head>
+<body>
+    <center>
+<label><h1>What's chuck doing today?</h1></label>
+<p id="chucks"></p>
+<div id="button">
+    <button onclick='jokes("animal")'> animal</button> 
+    <button onclick='jokes("career")'>career</button>
+    <button onclick='jokes("celeberity")'>celeberity</button> 
+    <button onclick='jokes("dev")'>dev</button> 
+    <button onclick='jokes("explicit")'>explicit</button> 
+    <button onclick='jokes("fashion")'>fashion</button> 
+    <button onclick='jokes("food")'>food</button> 
+    <button onclick='jokes("history")'>history</button> 
+    <button onclick='jokes("money")'>money</button> 
+    <button onclick='jokes("movie")'>movie</button> 
+    <button onclick='jokes("music")'>music</button> 
+    <button onclick='jokes("political")'>poltical</button> 
+    <button onclick='jokes("religion")'>religion</button> 
+    <button onclick='jokes("science")'>science</button> 
+    <button onclick='jokes("sport")'>sport</button> 
+    <button onclick='jokes("travel")'>travel</button> 
+</div>
+<br><br>
+     <img src="c:\Users\Simranpreet kaur\Downloads\download.jpg">
+</body>
+</center>
+</html>
